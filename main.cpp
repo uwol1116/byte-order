@@ -24,8 +24,8 @@ int main(int argc, char* argv[]){
 	fread(&num1, sizeof(num1), 1, fp1);
 	fread(&num2, sizeof(num2), 1, fp2);
 
-	num1 = htonl(num1);
-	num2 = htonl(num2);
+	num1 = ntohl(num1);
+	num2 = ntohl(num2);
 	result = num1 + num2;
 
 	printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n",num1, num1,num2,num2,result,result);
